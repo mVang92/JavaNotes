@@ -2,10 +2,18 @@ package javaNotes;
 
 public class JavaNotes {
 	
-	public static void swap(int[] arr, int a, int b) {
-		int temp = arr[a];
-		arr[a] = arr[b];
-		arr[b] = temp;
+	static Swap swap = new Swap();
+	
+	public static void moveZeros(int[] arr) {
+		int currentIndex = 0;
+		
+		for (int letterIndex = 0; letterIndex < arr.length; letterIndex++) {
+			int letter = arr[letterIndex];
+			if (letter != 0) {
+				Swap.swapElements(arr, currentIndex, letterIndex);
+				currentIndex++;
+			}
+		}
 	}
 	
 	public static void reverse(int[] arr) {
@@ -13,7 +21,7 @@ public class JavaNotes {
 		int back = arr.length - 1;
 		
 		while (front < back) {
-			swap(arr, front, back);
+			Swap.swapElements(arr, front, back);
 			front++;
 			back--;
 		}
@@ -21,15 +29,17 @@ public class JavaNotes {
 
 	public static void main(String[] args) {
 		
-		int[] arr = {2, 6, 4, 8, 9};
+		int[] arr1 = {2, 6, 4, 8, 9};
+		int[] arr2 = {6, 0, 9, 0, 0, 2, 0, 4};
 		
-		// Reverse an array
-		reverse(arr);
+//		Reverse an array -----------------------------
+//		reverse(arr1);
+//		swap.printRes(arr1);
 		
-		for (int element : arr) {
-			System.out.print(element + " ");
-		}
-
+//		Move all zeros to the end of array -----------
+//		moveZeros(arr2);
+//		Swap.printRes(arr2);
+		
 	}
 
 }
