@@ -1,8 +1,31 @@
 package javaNotes;
 
+import java.util.ArrayList;
+
 public class JavaNotes {
 	
 	static Swap swap = new Swap();
+	
+	public static ArrayList<Integer> compareTriplets(int[] alice, int[] bob) {
+		ArrayList<Integer> answer = new ArrayList<>();
+		final int LENGTH = 3;
+		int bobPoints = 0;
+		int alicePoints = 0;
+		
+		for (int i = 0; i < LENGTH; i++) {
+			if (alice[i] < bob[i]) {
+				bobPoints++;
+			}
+			if (alice[i] > bob[i]) {
+				alicePoints++;
+			}
+		}
+		
+		answer.add(alicePoints);
+		answer.add(bobPoints);
+		
+		return answer;
+	}
 	
 	public static int simpleSumArray(int[] arr) {
 		int sum = 0;
@@ -41,6 +64,8 @@ public class JavaNotes {
 		
 		int[] arr1 = {2, 6, 4, 8, 9};
 		int[] arr2 = {6, 0, 9, 0, 0, 2, 0, 4};
+		int[] alice = {5, 3, 4};
+		int[] bob = {3, 2, 6};
 		
 //		Reverse an array -----------------------------
 //		reverse(arr1);
@@ -51,7 +76,10 @@ public class JavaNotes {
 //		Swap.printRes(arr2);
 		
 //		Simple Sum Array -----------------------------
-		System.out.println(simpleSumArray(arr1));
+//		System.out.println(simpleSumArray(arr1));
+		
+//		Compare the Triplets -------------------------
+		System.out.println(compareTriplets(alice, bob));
 		
 	}
 
