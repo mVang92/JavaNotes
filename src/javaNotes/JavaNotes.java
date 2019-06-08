@@ -4,6 +4,16 @@ public class JavaNotes {
 	
 	static Swap swap = new Swap();
 	
+	public static int simpleSumArray(int[] arr) {
+		int sum = 0;
+		
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+		
+		return sum;
+	}
+	
 	public static void moveZeros(int[] arr) {
 		int currentIndex = 0;
 		
@@ -39,6 +49,9 @@ public class JavaNotes {
 //		Move all zeros to the end of array -----------
 //		moveZeros(arr2);
 //		Swap.printRes(arr2);
+		
+//		Simple Sum Array -----------------------------
+		System.out.println(simpleSumArray(arr1));
 		
 	}
 
