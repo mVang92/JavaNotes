@@ -59,6 +59,22 @@ public class JavaNotes {
 			back--;
 		}
 	}
+	
+	public static int diagonalDifference(int[][] arr) {
+		int leftSum = 0;
+		int rightSum = 0;
+		int rear = arr.length - 1;
+		int difference;
+		
+		for (int i = 0; i < arr.length; i++) {
+			leftSum += arr[i][i];
+			rightSum += arr[i][rear--];
+		}
+		difference = rightSum - leftSum;
+		
+		return difference;
+		
+	}
 
 	public static void main(String[] args) {
 		
@@ -66,6 +82,7 @@ public class JavaNotes {
 		int[] arr2 = {6, 0, 9, 0, 0, 2, 0, 4};
 		int[] alice = {5, 3, 4};
 		int[] bob = {3, 2, 6};
+		int[][] diagDiff = {{3, 7, 5},{4, 2, 1},{8, 6, 3}};
 		
 //		Reverse an array -----------------------------
 //		reverse(arr1);
@@ -79,7 +96,10 @@ public class JavaNotes {
 //		System.out.println(simpleSumArray(arr1));
 		
 //		Compare the Triplets -------------------------
-		System.out.println(compareTriplets(alice, bob));
+//		System.out.println(compareTriplets(alice, bob));
+		
+//		Diagonal Difference
+		System.out.println(diagonalDifference(diagDiff));
 		
 	}
 
