@@ -84,6 +84,19 @@ public class JavaNotes {
 			doubleMoney(days, currentDay, totalDollars);
 		}
 	}
+	
+	public static void saveToBeMillionaire() {
+		final int DOLLAR_AMOUNT = 5;
+		final int GOAL = 1000000;
+		final int DAYS_IN_YEAR = 365;
+		final int MONTH_IN_YEAR = 12;
+		
+		int days = GOAL/DOLLAR_AMOUNT;
+		int months = days/DAYS_IN_YEAR;
+		int years = months/MONTH_IN_YEAR;
+		System.out.println("It will take " + years +" year(s) or " + months + " month(s) or " + days + " day(s) to reach " + GOAL + " dollars.");
+		
+	}
 
 	public static void main(String[] args) {
 		
@@ -114,7 +127,10 @@ public class JavaNotes {
 //		System.out.println(diagonalDifference(diagDiff));
 		
 //		Double your dollar each day for a month
-		doubleMoney(days, currentDay, totalDollars);
+//		doubleMoney(days, currentDay, totalDollars);
+		
+//		How long before I become a millionaire
+		saveToBeMillionaire();
 		
 	}
 
