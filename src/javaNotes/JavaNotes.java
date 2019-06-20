@@ -75,6 +75,15 @@ public class JavaNotes {
 		return difference;
 		
 	}
+	
+	public static void doubleMoney(int days, int currentDay, int totalDollars) {
+		System.out.println("Day " + currentDay + ": " + totalDollars);
+		if (currentDay < days) {
+			currentDay++;
+			totalDollars *= 2;
+			doubleMoney(days, currentDay, totalDollars);
+		}
+	}
 
 	public static void main(String[] args) {
 		
@@ -82,7 +91,10 @@ public class JavaNotes {
 		int[] arr2 = {6, 0, 9, 0, 0, 2, 0, 4};
 		int[] alice = {5, 3, 4};
 		int[] bob = {3, 2, 6};
-		int[][] diagDiff = {{3, 7, 5},{4, 2, 1},{8, 6, 3}};
+		int[][] diagDiff = {{3, 4, 5},{4, 9, 1},{8, 6, 1}};
+		int days = 31;
+		int currentDay = 1;
+		int totalDollars = 1;
 		
 //		Reverse an array -----------------------------
 //		reverse(arr1);
@@ -99,7 +111,10 @@ public class JavaNotes {
 //		System.out.println(compareTriplets(alice, bob));
 		
 //		Diagonal Difference
-		System.out.println(diagonalDifference(diagDiff));
+//		System.out.println(diagonalDifference(diagDiff));
+		
+//		Double your dollar each day for a month
+		doubleMoney(days, currentDay, totalDollars);
 		
 	}
 
