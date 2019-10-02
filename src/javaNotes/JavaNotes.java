@@ -6,6 +6,15 @@ public class JavaNotes {
 	
 	static Swap swap = new Swap();
 	
+	public static ArrayList<Integer> reverseArrayWithoutSwap(int[] array) {
+		ArrayList<Integer> newArray = new ArrayList<>();
+		int rear = array.length - 1;
+		for (int currentIndex = rear; currentIndex >= 0; currentIndex--) {
+			newArray.add(array[currentIndex]);
+		}
+		return newArray;
+	}
+	
 	public static ArrayList<Integer> compareTriplets(int[] alice, int[] bob) {
 		ArrayList<Integer> answer = new ArrayList<>();
 		final int LENGTH = 3;
@@ -113,6 +122,9 @@ public class JavaNotes {
 //		reverse(arr1);
 //		swap.printRes(arr1);
 		
+//		Reverse an array without swap method
+		System.out.println(reverseArrayWithoutSwap(arr1));
+		
 //		Move all zeros to the end of array -----------
 //		moveZeros(arr2);
 //		Swap.printRes(arr2);
@@ -130,7 +142,7 @@ public class JavaNotes {
 //		doubleMoney(days, currentDay, totalDollars);
 		
 //		How long before I become a millionaire
-		saveToBeMillionaire();
+//		saveToBeMillionaire();
 		
 	}
 
